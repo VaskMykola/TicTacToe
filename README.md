@@ -21,3 +21,6 @@ The game is implemented using object-oriented programming principles in Python. 
 The game has two modes, single-player and multi-player. In single-player mode, the user plays against the computer. In multi-player mode, two human players play against each other.
 
 The game loop is contained in the __main__ function and continues until the user selects a valid game mode (single or multi-player). Once a valid mode is selected, the game object is created and the appropriate game mode method is called.
+## Images
+<img src="img.png">
+<img src="img_1.png">
