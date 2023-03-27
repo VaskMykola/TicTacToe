@@ -70,22 +70,15 @@ class TicTacToe:
             return True
 
     def check_winner(self):
-        return (self.board[0][0] == self.board[0][1] and self.board[0][1] == self.board[0][2] and self.board[0][
-            0] != "_" or
-                self.board[1][0] == self.board[1][1] and self.board[1][1] == self.board[1][2] and self.board[1][
-                    0] != "_" or
-                self.board[2][0] == self.board[2][1] and self.board[2][1] == self.board[2][2] and self.board[2][
-                    0] != "_" or
-                self.board[0][0] == self.board[1][0] and self.board[1][0] == self.board[2][0] and self.board[0][
-                    0] != "_" or
-                self.board[0][1] == self.board[1][1] and self.board[1][1] == self.board[2][1] and self.board[0][
-                    1] != "_" or
-                self.board[0][2] == self.board[1][2] and self.board[1][2] == self.board[2][2] and self.board[0][
-                    2] != "_" or
-                self.board[0][0] == self.board[1][1] and self.board[1][1] == self.board[2][2] and self.board[0][
-                    0] != "_" or
-                self.board[0][2] == self.board[1][1] and self.board[1][1] == self.board[2][0] and self.board[0][
-                    2] != "_")
+        for i in range(3):
+            if self.board[i][0] == self.board[i][1] == self.board[i][2] != "_":
+                return True
+            if self.board[0][i] == self.board[1][i] == self.board[2][i] != "_":
+                return True
+        if self.board[0][0] == self.board[1][1] == self.board[2][2] != "_":
+            return True
+        if self.board[0][2] == self.board[1][1] == self.board[2][0] != "_":
+            return True
 
     def is_game_finished(self):
         return self.check_winner() or self.check_draw()
